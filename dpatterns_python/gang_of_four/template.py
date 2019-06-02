@@ -1,10 +1,16 @@
+"""
+template pattern in python
+"""
+
 import inspect
 
 from abc import ABC, abstractmethod
 
 
 class AbstractClass(ABC):
-    # This class inherit from Abstract Base Class to allow the use of the @abstractmethod decorator
+    """
+    This class inherit from Abstract Base Class to allow the use of the @abstractmethod decorator
+    """
 
     def template_method(self):
         """Ths is the template method that contains a collection of
@@ -20,54 +26,74 @@ class AbstractClass(ABC):
         # This is a protected method that should not be overridden.
 
         name = inspect.currentframe().f_code.co_name
-        print('{}.{}'.format(self.__class__.__name__, name))
+        print("{}.{}".format(self.__class__.__name__, name))
 
     @abstractmethod
     def do_step_1(self):
-        # This method should be overridden
-        pass
+        """
+        This method should be overridden
+        :return:
+        """
+
+        print("do_step_1")
 
     @abstractmethod
     def do_step_2(self):
-        # This method should be overridden
-        pass
+        """
+        This method should be overridden
+        :return:
+        """
+        print("do_step_2")
 
     def do_this_or(self):
-        print('You can override me but you do not have to')
+        """
+
+        :return:
+        """
+        print("You can override me but you do not have to")
+        print(vars(self))
 
 
 class ConcreteClassA(AbstractClass):
-    # This class inherits from the Abstract class featuring the template method.
+    """
+    This class inherits from the Abstract class featuring the template method.
+    """
 
     def do_step_1(self):
-        print('Doing step 1 for ConcreteClassA ...')
+        print("Doing step 1 for ConcreteClassA ...")
 
     def do_step_2(self):
-        print('Doing step 2 for ConcreteClassA ...')
+        print("Doing step 2 for ConcreteClassA ...")
 
 
 class ConcreteClassB(AbstractClass):
-    # This class inherits from the Abstract class featuring the template method.
+    """
+    This class inherits from the Abstract class featuring the template method.
+    """
 
     def do_step_1(self):
-        print('Doing step 1 for ConcreteClassB ...')
+        print("Doing step 1 for ConcreteClassB ...")
 
     def do_step_2(self):
-        print('Doing step 2 for ConcreteClassB ...')
+        print("Doing step 2 for ConcreteClassB ...")
 
     def do_this_or(self):
-        print('Doing my own business ...')
+        print("Doing my own business ...")
 
 
 def main():
-    print('==ConcreteClassA==')
-    a = ConcreteClassA()
-    a.template_method()
+    """
 
-    print('==ConcreteClassB==')
-    b = ConcreteClassB()
-    b.template_method()
+    :return:
+    """
+    print("==ConcreteClassA==")
+    a_instance = ConcreteClassA()
+    a_instance.template_method()
+
+    print("==ConcreteClassB==")
+    b_instance = ConcreteClassB()
+    b_instance.template_method()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

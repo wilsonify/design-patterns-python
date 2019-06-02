@@ -1,20 +1,52 @@
-class Colleague(object):
+"""
+mediator pattern in python
+"""
+
+
+class Colleague:
+    """
+    Colleague
+    """
+
     def __init__(self, mediator, identity):
         self._mediator = mediator
         self._id = identity
 
     def get_id(self):
+        """
+        get_id
+        :return:
+        """
         return self._id
 
-    def send(self, msg):
-        pass
+    @staticmethod
+    def send(msg):
+        """
+        send
+        :param msg:
+        :return:
+        """
+        print("send")
+        print("msg = {}".format(msg))
 
-    def receive(self, msg):
-        pass
+    @staticmethod
+    def receive(msg):
+        """
+        receive
+        :param msg:
+        :return:
+        """
+        print("receive")
+        print("msg = {}".format(msg))
 
 
 class ConcreteColleague(Colleague):
+    """
+    ConcreteColleague
+    """
+
     def __init__(self, mediator, identity):
+        print("initializing ConcreteColleague")
         super().__init__(mediator, identity)
 
     def send(self, msg):
@@ -26,14 +58,38 @@ class ConcreteColleague(Colleague):
 
 
 class Mediator:
-    def add(self, colleague):
-        pass
+    """
+    Mediator
+    """
 
-    def distribute(self, sender, msg):
-        pass
+    @staticmethod
+    def add(colleague):
+        """
+
+        :param colleague:
+        :return:
+        """
+        print("add")
+        print("colleague = {}".format(colleague))
+
+    @staticmethod
+    def distribute(sender, msg):
+        """
+
+        :param sender:
+        :param msg:
+        :return:
+        """
+        print("distribute")
+        print("sender = {}".format(sender))
+        print("msg = {}".format(msg))
 
 
 class ConcreteMediator(Mediator):
+    """
+    ConcreteMediator
+    """
+
     def __init__(self):
         Mediator.__init__(self)
         self._colleague = []
@@ -48,17 +104,21 @@ class ConcreteMediator(Mediator):
 
 
 def main():
+    """
+
+    :return:
+    """
     mediator = ConcreteMediator()
 
-    c1 = ConcreteColleague(mediator, 1)
-    c2 = ConcreteColleague(mediator, 2)
-    c3 = ConcreteColleague(mediator, 3)
+    colleague1 = ConcreteColleague(mediator, 1)
+    colleague2 = ConcreteColleague(mediator, 2)
+    colleague3 = ConcreteColleague(mediator, 3)
 
-    mediator.add(c1)
-    mediator.add(c2)
-    mediator.add(c3)
+    mediator.add(colleague1)
+    mediator.add(colleague2)
+    mediator.add(colleague3)
 
-    c1.send("Good Morning!")
+    colleague1.send("Good Morning!")
 
 
 if __name__ == "__main__":
