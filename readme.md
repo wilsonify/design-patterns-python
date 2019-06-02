@@ -14,12 +14,29 @@
 
 based on https://www.lynda.com/Python-tutorials/Design-Patterns-Python
 
+# lint
+```bash
+python -m pylint
+```
+
+# test
+```bash
+python -m pytest
+```
+
+# coverage
+
+```bash
+python -m pytest --cov=dpatterns_python --cov-report xml:coverage-reports/coverage-dpatterns_python.xml
+```
 
 
 # scan
 
+```bash
 sonar-scanner \
   -Dsonar.projectKey=design_patterns_python \
   -Dsonar.sources=. \
   -Dsonar.host.url=http://10.152.183.181:9000 \
   -Dsonar.login=de95748e5013d29185ac125fabeaff012ffa724a
+```
