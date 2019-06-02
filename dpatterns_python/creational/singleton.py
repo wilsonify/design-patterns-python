@@ -27,12 +27,23 @@ class Singleton(Borg):  # Inherits from the Borg class
         return str(self._shared_data)  # Returns the attribute dictionary for printing
 
 
-# Let's create a singleton object and add our first acronym
-XS = Singleton(HTTP="Hyper Text Transfer Protocol")
-# Print the object
-print(XS)
+def main():
+    """
+    # Let's create a singleton object and add our first acronym
+    # Print the object
+    # Let's create another singleton object and if it refers to the same attribute dictionary by adding another acronym.
+    # Print the object
+    :return:
+    """
 
-# Let's create another singleton object and if it refers to the same attribute dictionary by adding another acronym.
-YS = Singleton(SNMP="Simple Network Management Protocol")
-# Print the object
-print(YS)
+    singleton1 = Singleton(HTTP="Hyper Text Transfer Protocol")
+
+    print(singleton1)
+
+    singleton2 = Singleton(SNMP="Simple Network Management Protocol")
+
+    print(singleton2)
+
+
+if __name__ == "__main__":
+    main()

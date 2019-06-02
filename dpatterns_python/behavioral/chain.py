@@ -72,11 +72,20 @@ class Client:
             self.handler.handle(request)
 
 
-# Create a client
-CLIENT = Client()
+def main():
+    """
+    Create a client
+    Create requests
+    Send the requests
+    :return:
+    """
 
-# Create requests
-REQUEST = [2, 5, 30]
+    client1 = Client()
 
-# Send the requests
-CLIENT.delegate(REQUEST)
+    request1 = [2, 5, 30]
+
+    client1.delegate(request1)
+
+
+if __name__ == "__main__":
+    main()

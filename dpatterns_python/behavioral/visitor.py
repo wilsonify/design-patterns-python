@@ -69,15 +69,24 @@ class Electrician(Visitor):  # Inherits from the parent class, Visitor
     # Create an HVAC specialist
 
 
-HVAC = HvacSpecialist()
-# Create an electrician
-ELECTRICIAN = Electrician()
+def main():
+    """
+    Create an electrician
+    Create a house
+    Let the house accept the HVAC specialist and work on the house by invoking the visit() method
+    Let the house accept the electrician and work on the house by invoking the visit() method
+    :return:
+    """
+    hvac = HvacSpecialist()
 
-# Create a house
-HOME = House()
+    electrician = Electrician()
 
-# Let the house accept the HVAC specialist and work on the house by invoking the visit() method
-HOME.accept(HVAC)
+    home = House()
 
-# Let the house accept the electrician and work on the house by invoking the visit() method
-HOME.accept(ELECTRICIAN)
+    home.accept(hvac)
+
+    home.accept(electrician)
+
+
+if __name__ == "__main__":
+    main()

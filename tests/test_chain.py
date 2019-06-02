@@ -1,7 +1,13 @@
+"""
+test chain pattern
+"""
+
 from dpatterns_python.behavioral import chain
 
 
-def test_delegate():
-    c = chain.Client()
-    requests_list = [2, 5, 30]
-    c.delegate(requests_list)
+def test_main():
+    """
+    call the main
+    :return:
+    """
+    chain.main()

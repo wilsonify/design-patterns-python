@@ -42,10 +42,19 @@ class Car:
         return "{} | {} | {}".format(self.name, self.color, self.options)
 
 
-C0 = Car()
-PROTOTYPE = Prototype()
-PROTOTYPE.register_object("skylark", C0)
+def main():
+    """
+    try out a prototype car
+    :return:
+    """
+    car0 = Car()
+    prototype1 = Prototype()
+    prototype1.register_object("skylark", car0)
 
-C1 = PROTOTYPE.clone("skylark")
+    clone1 = prototype1.clone("skylark")
 
-print(C1)
+    print(clone1)
+
+
+if __name__ == "__main__":
+    main()

@@ -92,18 +92,29 @@ class TempViewer:
         )
 
 
-# Let's create our subjects
-C1 = Core("Core 1")
-C2 = Core("Core 2")
+def main():
+    """
+    Let's create our subjects
+    Let's create our observers
+    Let's attach our observers to the first core
+    Let's change the temperature of our first core
 
-# Let's create our observers
-V1 = TempViewer()
-V2 = TempViewer()
+    :return:
+    """
 
-# Let's attach our observers to the first core
-C1.attach(V1)
-C1.attach(V2)
+    core1 = Core("Core 1")
+    core2 = Core("Core 2")
 
-# Let's change the temperature of our first core
-C1.temp = 80
-C1.temp = 90
+    viewer1 = TempViewer()
+    viewer2 = TempViewer()
+
+    core1.attach(viewer1)
+    core1.attach(viewer2)
+
+    core1.temp = 80
+    core1.temp = 90
+    core2.temp = 100
+
+
+if __name__ == "__main__":
+    main()

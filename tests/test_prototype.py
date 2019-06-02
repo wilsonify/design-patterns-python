@@ -1,9 +1,13 @@
+"""
+test prototype pattern
+"""
+
 from dpatterns_python.creational import prototype as pt
 
 
-def test_clone():
-    c = pt.Car()
-    prototype = pt.Prototype()
-    prototype.register_object('skylark', c)
-    c1 = prototype.clone('skylark')
-    print(c1)
+def test_main():
+    """
+    call the main
+    :return:
+    """
+    pt.main()

@@ -1,11 +1,13 @@
+"""
+test proxy pattern
+"""
+
 from dpatterns_python.structural import proxy
 
 
-def test_produce():
-    p = proxy.Proxy()
-
-    p.produce()  # Make the proxy: Artist produce until Producer is available
-
-    p.occupied = 'Yes'
-
-    p.produce()
+def test_main():
+    """
+    call the main
+    :return:
+    """
+    proxy.main()

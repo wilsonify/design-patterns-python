@@ -59,11 +59,20 @@ class PetStore:
         self.show_pet()
 
 
-# Create a Concrete Factory
-FACTORY = DogFactory()
+def main():
+    """
+    Create a Concrete Factory
+    Create a pet store housing our Abstract Factory
+    Invoke the utility method to show the details of our pet
+    :return:
+    """
 
-# Create a pet store housing our Abstract Factory
-SHOP = PetStore(FACTORY)
+    factory1 = DogFactory()
 
-# Invoke the utility method to show the details of our pet
-SHOP.show_pet()
+    shop1 = PetStore(factory1)
+
+    shop1.show_pet()
+
+
+if __name__ == "__main__":
+    main()

@@ -49,10 +49,19 @@ def get_pet(pet="dog"):
     return pets[pet]
 
 
-DOG = get_pet("dog")
+def main():
+    """
+    try out the pet factory
+    :return:
+    """
+    dog1 = get_pet("dog")
 
-print(DOG.speak())
+    print(dog1.speak())
 
-CAT = get_pet("cat")
+    cat1 = get_pet("cat")
 
-print(CAT.speak())
+    print(cat1.speak())
+
+
+if __name__ == "__main__":
+    main()

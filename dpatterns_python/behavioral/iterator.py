@@ -21,9 +21,18 @@ def count_to(count):
         yield number
 
 
-# Let's test the generator returned by our iterator
-for num in count_to(3):
-    print("{}".format(num))
+def main():
+    """
+    Let's test the generator returned by our iterator
+    :return:
+    """
 
-for num in count_to(4):
-    print("{}".format(num))
+    for num in count_to(3):
+        print("{}".format(num))
+
+    for num in count_to(4):
+        print("{}".format(num))
+
+
+if __name__ == "__main__":
+    main()

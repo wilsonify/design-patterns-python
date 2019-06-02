@@ -50,14 +50,20 @@ class Proxy:
             print("Producer is busy!")
 
 
-# Instantiate a Proxy
-PROXY = Proxy()
+def main():
+    """
+    Instantiate a Proxy
+    Make the proxy: Artist produce until Producer is available
+    Change the state to 'occupied'
+    Make the Producer produce
+    :return:
+    """
 
-# Make the proxy: Artist produce until Producer is available
-PROXY.produce()
+    proxy1 = Proxy()
+    proxy1.produce()
+    proxy1.occupied = "Yes"
+    proxy1.produce()
 
-# Change the state to 'occupied'
-PROXY.occupied = "Yes"
 
-# Make the Producer produce
-PROXY.produce()
+if __name__ == "__main__":
+    main()

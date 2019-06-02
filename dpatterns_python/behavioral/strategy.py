@@ -44,18 +44,28 @@ def strategy_two(self):
     print("{} is used to execute method 2".format(self.name))
 
 
-# Let's create our default strategy
-S0 = Strategy()
-# Let's execute our default strategy
-S0.execute()  # pylint: disable= not-callable
+def main():
+    """
+    Let's create our default strategy
+    Let's execute our default strategy
+    Let's create the first variation of our default strategy by providing a new behavior
+    Let's set its name
+    Let's execute the strategy
+    :return:
+    """
 
-# Let's create the first variation of our default strategy by providing a new behavior
-S1 = Strategy(strategy_one)
-# Let's set its name
-S1.name = "Strategy One"
-# Let's execute the strategy
-S1.execute()  # pylint: disable= not-callable
+    strategy0 = Strategy()
 
-S2 = Strategy(strategy_two)
-S2.name = "Strategy Two"
-S2.execute()  # pylint: disable= not-callable
+    strategy0.execute()  # pylint: disable= not-callable
+
+    strategy1 = Strategy(strategy_one)
+    strategy1.name = "Strategy One"
+    strategy1.execute()  # pylint: disable= not-callable
+
+    strategy2 = Strategy(strategy_two)
+    strategy2.name = "Strategy Two"
+    strategy2.execute()  # pylint: disable= not-callable
+
+
+if __name__ == "__main__":
+    main()

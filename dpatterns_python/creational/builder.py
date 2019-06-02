@@ -78,8 +78,17 @@ class Car:
         return "{} | {} | {}".format(self.model, self.tires, self.engine)
 
 
-BUILDER = SkyLarkBuilder()
-DIRECTOR = Director(BUILDER)
-DIRECTOR.construct_car()
-CAR = DIRECTOR.get_car()
-print(CAR)
+def main():
+    """
+    try out the builder
+    :return:
+    """
+    builder1 = SkyLarkBuilder()
+    director1 = Director(builder1)
+    director1.construct_car()
+    car1 = director1.get_car()
+    print(car1)
+
+
+if __name__ == "__main__":
+    main()

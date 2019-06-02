@@ -60,12 +60,21 @@ class Circle:
         self._radius *= percent
 
 
-# Build the first Circle object using API One
-CIRCLE1 = Circle(1, 2, 3, DrawingAPIOne())
-# Draw a circle
-CIRCLE1.draw()
+def main():
+    """
+    Build the first Circle object using API One
+    Draw a circle
+    Build the second Circle object using API Two
+    Draw a circle
 
-# Build the second Circle object using API Two
-CIRCLE2 = Circle(2, 3, 4, DrawingAPITwo())
-# Draw a circle
-CIRCLE2.draw()
+    :return:
+    """
+
+    circle1 = Circle(1, 2, 3, DrawingAPIOne())
+    circle1.draw()
+    circle2 = Circle(2, 3, 4, DrawingAPITwo())
+    circle2.draw()
+
+
+if __name__ == "__main__":
+    main()
