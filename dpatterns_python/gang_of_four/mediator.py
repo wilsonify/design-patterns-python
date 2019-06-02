@@ -1,9 +1,9 @@
 class Colleague(object):
-    def __init__(self, mediator, id):
+    def __init__(self, mediator, identity):
         self._mediator = mediator
-        self._id = id
+        self._id = identity
 
-    def getID(self):
+    def get_id(self):
         return self._id
 
     def send(self, msg):
@@ -14,8 +14,8 @@ class Colleague(object):
 
 
 class ConcreteColleague(Colleague):
-    def __init__(self, mediator, id):
-        super().__init__(mediator, id)
+    def __init__(self, mediator, identity):
+        super().__init__(mediator, identity)
 
     def send(self, msg):
         print("Message '" + msg + "' sent by Colleague " + str(self._id))
@@ -43,7 +43,7 @@ class ConcreteMediator(Mediator):
 
     def distribute(self, sender, msg):
         for colleague in self._colleague:
-            if colleague.getID() != sender.getID():
+            if colleague.get_id() != sender.get_id():
                 colleague.receive(msg)
 
 

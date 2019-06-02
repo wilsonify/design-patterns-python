@@ -1,8 +1,8 @@
-class AtmState():
+class AtmState:
     name = "state"
     allowed = []
 
-    def goNext(self, state):
+    def go_next(self, state):
         if state.name in self.allowed:
             print("Current State: ", self, " switched to: ", state.name)
             self.__class__ = state
@@ -24,21 +24,21 @@ class On(AtmState):
     allowed = ['off']
 
 
-class ATM():
+class ATM:
 
     def __init__(self):
         self.current = Off()
 
-    def setState(self, state):
-        self.current.goNext(state)
+    def set_state(self, state):
+        self.current.go_next(state)
 
 
 def main():
     atm = ATM()
 
-    atm.setState(On)
-    atm.setState(Off)
-    atm.setState(Off)
+    atm.set_state(On)
+    atm.set_state(Off)
+    atm.set_state(Off)
 
 
 if __name__ == "__main__":

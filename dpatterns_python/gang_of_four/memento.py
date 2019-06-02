@@ -11,7 +11,6 @@ class Originator:
 
     def set_memento(self, memento):
         previous_state = pickle.loads(memento)
-        vars(self).clear
         vars(self).update(previous_state)
 
 

@@ -1,4 +1,4 @@
-import sys
+import inspect
 
 from abc import ABC, abstractmethod
 
@@ -8,7 +8,7 @@ class AbstractClass(ABC):
 
     def template_method(self):
         """Ths is the template method that contains a collection of
-        methods to stay the same, to be overriden, and to be overriden optionally.
+        methods to stay the same, to be overridden, and to be overridden optionally.
         """
 
         self.__always_do_this()
@@ -17,23 +17,23 @@ class AbstractClass(ABC):
         self.do_this_or()
 
     def __always_do_this(self):
-        # This is a protected method that should not be overriden.
+        # This is a protected method that should not be overridden.
 
-        name = sys._getframe().f_code.co_name
+        name = inspect.currentframe().f_code.co_name
         print('{}.{}'.format(self.__class__.__name__, name))
 
     @abstractmethod
     def do_step_1(self):
-        # This method should be overriden
+        # This method should be overridden
         pass
 
     @abstractmethod
     def do_step_2(self):
-        # This method should be overriden
+        # This method should be overridden
         pass
 
     def do_this_or(self):
-        print('You can overide me but you do not have to')
+        print('You can override me but you do not have to')
 
 
 class ConcreteClassA(AbstractClass):

@@ -1,14 +1,14 @@
 from abc import abstractmethod
 
 
-class AbstractExpression():
+class AbstractExpression:
 
     @abstractmethod
     def interpret(self):
         pass
 
 
-class NonterminalExpression(AbstractExpression):
+class NonTerminalExpression(AbstractExpression):
 
     def __init__(self, expression):
         self._expression = expression
@@ -25,7 +25,7 @@ class TerminalExpression(AbstractExpression):
 
 
 def main():
-    ast = NonterminalExpression(NonterminalExpression(TerminalExpression()))
+    ast = NonTerminalExpression(NonTerminalExpression(TerminalExpression()))
     ast.interpret()
 
 

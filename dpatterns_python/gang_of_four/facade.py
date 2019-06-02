@@ -1,18 +1,21 @@
 class SubsystemA:
-
-    def method1(self):
+    @staticmethod
+    def method1():
         print('SubsystemA method1 ...')
 
-    def method2(self):
+    @staticmethod
+    def method2():
         print('SubsystemA method2 ...')
 
 
 class SubsystemB:
 
-    def method1(self):
+    @staticmethod
+    def method1():
         print('SubsystemB method1 ...')
 
-    def method2(self):
+    @staticmethod
+    def method2():
         print('SubsystemB method2 ...')
 
 
