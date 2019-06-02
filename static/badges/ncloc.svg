@@ -16,7 +16,7 @@
         <text x="26" y="15" textLength="70" fill="#010101" fill-opacity=".3">lines of code</text>
         <text x="26" y="14" textLength="70">lines of code</text>
         <text x="108" y="15" textLength="21" fill="#010101" fill-opacity=".3">346</text>
-        <text x="108" y="14" textLength="21">346</text>
+        <text x="108" y="14" textLength="21">568</text>
     </g>
     <g fill="#4e9bcd">
         <path d="M17.975 16.758h-.815c0-6.557-5.411-11.893-12.062-11.893v-.813c7.102 0 12.877 5.7 12.877 12.706z"/>

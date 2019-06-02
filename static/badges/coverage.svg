@@ -16,7 +16,7 @@
         <text x="26" y="15" textLength="50" fill="#010101" fill-opacity=".3">coverage</text>
         <text x="26" y="14" textLength="50">coverage</text>
         <text x="88" y="15" textLength="37" fill="#010101" fill-opacity=".3">96.2%</text>
-        <text x="88" y="14" textLength="37">96.2%</text>
+        <text x="88" y="14" textLength="37">93.9%</text>
     </g>
     <g fill="#4e9bcd">
         <path d="M17.975 16.758h-.815c0-6.557-5.411-11.893-12.062-11.893v-.813c7.102 0 12.877 5.7 12.877 12.706z"/>
