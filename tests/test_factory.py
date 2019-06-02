@@ -1,6 +1,6 @@
 import pytest
 
-from dpatterns_python import factory
+from dpatterns_python.creational import factory
 
 
 @pytest.mark.parametrize('animal', ['dog', 'cat'])

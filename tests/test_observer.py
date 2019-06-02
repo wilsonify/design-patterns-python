@@ -1,4 +1,4 @@
-from dpatterns_python import observer
+from dpatterns_python.behavioral import observer
 
 
 def test_attach():

@@ -1,4 +1,4 @@
-from dpatterns_python import strategy
+from dpatterns_python.behavioral import strategy
 
 
 def test_execute():

@@ -1,4 +1,4 @@
-from dpatterns_python import singleton
+from dpatterns_python.creational import singleton
 
 
 def test_singleton():

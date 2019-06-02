@@ -1,4 +1,4 @@
-from dpatterns_python import prototype as pt
+from dpatterns_python.creational import prototype as pt
 
 
 def test_clone():

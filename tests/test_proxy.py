@@ -1,4 +1,4 @@
-from dpatterns_python import proxy
+from dpatterns_python.structural import proxy
 
 
 def test_produce():

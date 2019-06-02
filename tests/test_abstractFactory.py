@@ -1,4 +1,4 @@
-from dpatterns_python import abstract_factory
+from dpatterns_python.creational import abstract_factory
 
 
 def test_show_pet():

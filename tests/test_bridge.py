@@ -1,6 +1,6 @@
 import pytest
 
-from dpatterns_python import bridge
+from dpatterns_python.structural import bridge
 
 
 @pytest.mark.parametrize(('inputs'), ([1, 2, 3], [2, 3, 4]))

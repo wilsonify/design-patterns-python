@@ -1,4 +1,4 @@
-from dpatterns_python import composite
+from dpatterns_python.structural import composite
 
 
 def test_component_function():

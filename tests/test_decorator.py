@@ -1,4 +1,4 @@
-from dpatterns_python import decorator
+from dpatterns_python.structural import decorator
 
 
 def test_hello_world():

@@ -1,4 +1,4 @@
-from dpatterns_python import builder
+from dpatterns_python.creational import builder
 
 
 def test_get_car():

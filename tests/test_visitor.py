@@ -1,4 +1,4 @@
-from dpatterns_python import visitor
+from dpatterns_python.behavioral import visitor
 
 
 def test_accept():

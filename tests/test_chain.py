@@ -1,4 +1,4 @@
-from dpatterns_python import chain
+from dpatterns_python.behavioral import chain
 
 
 def test_delegate():

@@ -1,6 +1,6 @@
 import pytest
 
-from dpatterns_python import iterator
+from dpatterns_python.behavioral import iterator
 
 
 @pytest.mark.parametrize('maxcount', [3, 4])
