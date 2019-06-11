@@ -1,46 +1,44 @@
 """
 strategy pattern in python
 """
-import types
+from types import MethodType
 
 
 class Strategy:
     """The Strategy Pattern class"""
 
-    def __init__(self, function=None):
+    def __init__(self, function):
         self.name = "Default Strategy"
-
-        # If a reference to a function is provided, replace the execute() method with the given function
-        if function:
-            self.execute = types.MethodType(function, self)
-
-    # pylint: disable=method-hidden
-    def execute(self):
-        """
-        # This gets replaced by another version if another strategy is provided.
-        The default method that prints the name of the strategy being used
-        :return:
-        """
-        print("{} is used!".format(self.name))
+        self.execute = MethodType(function, self)
 
 
-# Replacement method 1
 def strategy_one(self):
     """
-
+    # Replacement method 1
     :param self:
     :return:
     """
+    self.name = "Strategy One"
     print("{} is used to execute method 1".format(self.name))
 
 
-# Replacement method 2
 def strategy_two(self):
     """
-
+    # Replacement method 2
     :param self:
     :return:
     """
+    self.name = "Strategy Two"
+    print("{} is used to execute method 2".format(self.name))
+
+
+def strategy_three(self):
+    """
+    # Replacement method 3
+    :param self:
+    :return:
+    """
+    self.name = "Strategy Three"
     print("{} is used to execute method 2".format(self.name))
 
 
@@ -54,17 +52,14 @@ def main():
     :return:
     """
 
-    strategy0 = Strategy()
-
-    strategy0.execute()  # pylint: disable= not-callable
-
     strategy1 = Strategy(strategy_one)
-    strategy1.name = "Strategy One"
-    strategy1.execute()  # pylint: disable= not-callable
+    strategy1.execute()  # pylint: disable=not-callable
 
     strategy2 = Strategy(strategy_two)
-    strategy2.name = "Strategy Two"
-    strategy2.execute()  # pylint: disable= not-callable
+    strategy2.execute()  # pylint: disable=not-callable
+
+    strategy3 = Strategy(strategy_three)
+    strategy3.execute()  # pylint: disable=not-callable
 
 
 if __name__ == "__main__":
